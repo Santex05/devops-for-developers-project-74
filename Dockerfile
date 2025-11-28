@@ -2,6 +2,8 @@ FROM node:20.12.2
 
 WORKDIR /app
 
-COPY . .
+COPY /app ./app
 
-RUN npm install -g make
+WORKDIR /app/app
+
+RUN npm install
