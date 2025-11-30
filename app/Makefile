@@ -1,7 +1,7 @@
-.PHONY: setup install db-migrate build prepare-env start dev start-backend start-frontend lint lint-fix test ci
+.PHONY: setup install db-migrate build prepare-env start dev start-backend start-frontend lint lint-fix test ci	
 
 setup: install db-migrate
-	@echo "Setup complete!"
+	@echo "Setup complete!"	
 
 install:
 	npm install	
