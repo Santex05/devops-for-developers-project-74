@@ -4,37 +4,37 @@ setup: install db-migrate
 	@echo "Setup complete!"
 
 install:
-	npm install
+	npm install	
 
 db-migrate:
-	npm run migrate
+	npm run migrate	
 
 build:
-	npm run build
+	npm run build	
 
 prepare-env:
-	cp -n .env.example .env
+	cp -n .env.example .env	
 
 start:
-	NODE_ENV=production npm run start
+	NODE_ENV=production npm run start	
 
 dev:
-	npx concurrently "make start-frontend" "make start-backend"
+	npx concurrently "make start-frontend" "make start-backend"	
 
 start-backend:
-	npm start -- --watch --verbose-watch --ignore-watch='node_modules .git .sqlite'
+	npm start -- --watch --verbose-watch --ignore-watch='node_modules .git .sqlite'	
 
 start-frontend:
-	npx webpack --watch --progress
+	npx webpack --watch --progress	
 
 lint:
-	npx eslint .
+	npx eslint .	
 
 lint-fix:
-	npx eslint --fix .
+	npx eslint --fix .	
 
 test:
-	NODE_ENV=test npm test -s
+	NODE_ENV=test npm test -s	
 
 ci:
-	docker-compose -f docker-compose.test.yml up --abort-on-container-exit --remove-orphans
+	docker-compose -f docker-compose.test.yml up --abort-on-container-exit --remove-orphans	
